@@ -12,7 +12,7 @@ class App extends Component {
       avatar: 'https://media.licdn.com/dms/image/C5603AQGpTnXH4rRSEg/profile-displayphoto-shrink_100_100/0?e=1548892800&v=beta&t=OMIw_CvDp-z_Oclz5OPo_0nvbSVhVvKnygBNOmd6l7U',
       name: 'Barry Knapp',
       profession: 'Dev Team Lead',
-      bio: '🖐 Dev Team Lead - at Overstock.com',
+      bio: '🖐 Dev Team Lead - @ Overstock.com',
       address: 'APEX, NC',
       social: [
         {name: 'share-alt', url: 'https://stackoverflow.com/users/1082668/barry-knapp'},
