@@ -7,14 +7,13 @@
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-images": "^0.5.19",
     "react-scripts": "1.0.7"
   },
-
   "devDependencies": {
     "nib": "^1.1.2",
     "stylus": "^0.54.5"
   },
-
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
