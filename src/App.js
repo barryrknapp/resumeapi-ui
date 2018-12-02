@@ -71,6 +71,14 @@ if(res.avatar==null){
               <Education education={res.education} />
               <Certificate certificate={res.certificate} />
               <Skills skills={res.skills} />
+              Resume Architecture Links
+              <ul>
+                <li><a href='http://resumeapi.knapp.work/resume/barry'>JSON - http://resumeapi.knapp.work/resume/barry</a></li>
+                <li><a href='https://github.com/barryrknapp/resume-api'>GITHUB Resume Api Spring-boot- https://github.com/barryrknapp/resume-api</a></li>
+                <li><a href='https://github.com/barryrknapp/resumeapi-ui'>GITHUB Resume UI React.js- https://github.com/barryrknapp/resumeapi-ui</a></li>
+                  <li><a href='https://hub.docker.com/r/barryknapp/work.knapp.public/tags/'>DOCKER - https://hub.docker.com/r/barryknapp/work.knapp.public/tags/</a></li>
+
+            </ul>
               Thanks to <a href='https://github.com/gndx/gresume-react'>gresume</a> for the react template used as a baseline for the UI
             </div>
           </div>
