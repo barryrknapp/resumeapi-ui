@@ -71,6 +71,7 @@ if(res.avatar==null){
               <Education education={res.education} />
               <Certificate certificate={res.certificate} />
               <Skills skills={res.skills} />
+              Thanks to <a href='https://github.com/gndx/gresume-react'>gresume</a> for the react template used as a baseline for the UI
             </div>
           </div>
           </div>
