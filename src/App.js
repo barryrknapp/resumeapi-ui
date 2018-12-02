@@ -4,7 +4,7 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Certificate from './components/Certificate';
 import Skills from './components/Skills';
-import Lightbox from 'react-images';
+//import Lightbox from 'react-images';
 
 
 class App extends Component {
@@ -17,57 +17,57 @@ class App extends Component {
   }
 
 componentDidMount(){
+  console.log('componentDidMount')
 //http://resumeapi-env.fp5zraupj7.us-east-2.elasticbeanstalk.com/resume/barry
-  fetch('http://resumeapi.knapp.work/resume/barry', { mode: 'no-cors'})
+//  fetch('http://resumeapi.knapp.work/resume/barry')
+  fetch('http://localhost:8080/resume/barry')
   .then(results => {
     console.log(results)
       return results.json();
   }).then(data => {
-      let resume = data.results.map((res) => {
-      <div>
-      <div className='sidebar'>
-        <Lightbox
-        images={[{ src: 'http://knapp.work/media/knapp_work_arch.png' }]}
-        isOpen={this.state.lightboxIsOpen}
-        onClickPrev={this.gotoPrevious}
-        onClickNext={this.gotoNext}
-        onClose={this.closeLightbox}
-      />
-        <About
-          avatar={res.avatar}
-          name={res.name}
-          profession={res.profession}
-          bio={res.bio}
-          address={res.address}
-          social={res.social} />
-      </div>
-
-      <div className='content-wrapper'>
-          <div className='content'>
-            <Experience experience={res.experience} />
-            <Education education={res.education} />
-            <Certificate certificate={res.certificate} />
-            <Skills skills={res.skills} />
-          </div>
-      </div>
-      </div>
+      //let Store = [];
+      //Store.push(data);
+      this.setState({resume: data});
     })
-      this.setState(resume:resume);
-      console.log(resume);
-  })
-
-
-
+      console.log(this.state.resume);
 
 }
 
   render() {
+    let r = this.rendered();
+    return r;
+}
 
+rendered(){
 
+let res = this.state.resume;
+if(res.avatar==null){
+  return <header><div></div></header>
+}
     return (
+
       <header>
         <div className='wrapper'>
-          {this.state.resume}
+          <div>
+          <div className='sidebar'>
+            <About
+              avatar={res.avatar}
+              name={res.name}
+              profession={res.profession}
+              bio={res.bio}
+              address={res.address}
+              social={res.social} />
+          </div>
+
+          <div className='content-wrapper'>
+            <div className='content'>
+              <Experience experience={res.experience} />
+              <Education education={res.education} />
+              <Certificate certificate={res.certificate} />
+              <Skills skills={res.skills} />
+            </div>
+          </div>
+          </div>
         </div>
       </header>
     );
