@@ -8,7 +8,7 @@ class Gallery extends Component {
 		super();
 
 		this.state = {
-			lightboxIsOpen: true,
+			lightboxIsOpen: false,
 			currentImage: 0,
 		};
 
@@ -82,6 +82,13 @@ class Gallery extends Component {
 				{this.props.heading && <h2>{this.props.heading}</h2>}
 				{this.props.subheading && <p>{this.props.subheading}</p>}
 				{this.renderGallery()}
+        <a
+          href='#'
+          onClick={(e) => this.openLightbox(0, e)}
+        >
+          <img src='../media/knapp_work_arch.png' width='200' alt='' />
+        </a>
+
 				<Lightbox
 					currentImage={this.state.currentImage}
 					images={this.props.images}

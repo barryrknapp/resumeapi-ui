@@ -50,7 +50,6 @@ if(res.avatar==null){
         <div className='wrapper'>
           <div>
           <div className='sidebar'>
-
             <About
               avatar={res.avatar}
               name={res.name}
@@ -58,10 +57,13 @@ if(res.avatar==null){
               bio={res.bio}
               address={res.address}
               social={res.social} />
+
           </div>
 
           <div className='content-wrapper'>
+
             <div className='content'>
+            
               <LightboxGallery
                 images={[
                   { src: '../media/knapp_work_arch.png'}
